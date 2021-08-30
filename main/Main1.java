@@ -2,7 +2,6 @@ package in.greatlearning.oopslab.main;
 
 import in.greatlearning.oopslab.pojo.Employee;
 import in.greatlearning.oopslab.services.CredentialServices;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -30,40 +29,32 @@ public class Main1 {
 		try {
 			System.out.println("Please enter the department from the following");
 			System.out.println(" 1. Technical" + "\n 2. Admin" + "\n 3. Human Resource" + "\n 4. Legal");
-
+			
 			int value = sc.nextInt();
 			switch (value) {
 			case 1:
 				String deptn1 = "tech";
-				System.out.println(services.showCredentials(name));
-				System.out.print("Email --> ");
-				System.out.println(services.generateEmailAddress(employee, deptn1));
-				System.out.print("Password --> ");
-				System.out.println(CredentialServices.generatePassword(8));
+				services.generateEmailAddress(employee, deptn1);
+				CredentialServices.generatePassword(8);
+				services.showCredentials(name);
 				break;
 			case 2:
 				String deptn2 = "admin";
-				System.out.println(services.showCredentials(name));
-				System.out.print("Email --> ");
-				System.out.println(services.generateEmailAddress(employee, deptn2));
-				System.out.print("Password --> ");
-				System.out.println(CredentialServices.generatePassword(8));
+				services.generateEmailAddress(employee, deptn2);
+				CredentialServices.generatePassword(8);
+				services.showCredentials(name);
 				break;
 			case 3:
 				String deptn3 = "hr";
-				System.out.println(services.showCredentials(name));
-				System.out.print("Email --> ");
-				System.out.println(services.generateEmailAddress(employee, deptn3));
-				System.out.print("Password --> ");
-				System.out.println(CredentialServices.generatePassword(8));
+				services.generateEmailAddress(employee, deptn3);
+				CredentialServices.generatePassword(8);
+				services.showCredentials(name);
 				break;
 			case 4:
 				String deptn4 = "legal";
-				System.out.println(services.showCredentials(name));
-				System.out.print("Email --> ");
-				System.out.println(services.generateEmailAddress(employee, deptn4));
-				System.out.print("Password --> ");
-				System.out.println(CredentialServices.generatePassword(8));
+				services.generateEmailAddress(employee, deptn4);
+				CredentialServices.generatePassword(8);
+				services.showCredentials(name);
 				break;
 			default:
 				System.out.println("Please enter correct value");
